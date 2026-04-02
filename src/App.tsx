@@ -4,6 +4,7 @@ import LandingPage from './components/LandingPage';
 import Register from './components/Register';
 import SignIn from './components/SignIn';
 import Welcome from './components/Welcome';
+import NotFound from './components/NotFound';
 import "./App.css"
 const App: React.FC = () => {
   return (
@@ -13,7 +14,8 @@ const App: React.FC = () => {
         <Route path="/auth/register" element={<Register />} />
         <Route path="/auth/signin" element={<SignIn />} />
         <Route path="/welcome" element={<Welcome />} />
-      </Routes>
+        <Route path="*" element={<NotFound />} />
+        </Routes>
   );
 };
 
